@@ -11,7 +11,15 @@
     <meta property="og:description" content="meta property=og:description"/>
     <meta property="og:site_name" content="meta property=og:site_name"/>
     <!---->
-
+    <script type="text/javascript">
+      function asyncChangeTitle() {
+        return new Promise(resolve => {
+          document.title = "JSから非同期で差し替えた文字列";
+          resolve();
+        });
+      }
+      asyncChangeTitle();
+    </script>
   </head>
   <body>
     <pre>
