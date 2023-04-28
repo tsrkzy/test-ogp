@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+    <!---->
+    <meta name="description" content=" "/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="アンカーリンクになるほう"/>
+    <meta property="og:description" content=" "/>
+    <meta property="og:site_name" content="アンカーリンクにならないほう"/>
+    <title>titleタグの文字列</title>
+    <script type="text/javascript">
+      function asyncChangeTitle() {
+        return new Promise(resolve => {
+          document.title = "JSから非同期で差し替えた文字列";
+          resolve();
+        });
+      }
+
+      asyncChangeTitle();
+    </script>
+    <!---->
+  </head>
+  <body>
+    <a href="https://raw.githack.com/tsrkzy/test-ogp/main/pages/index.html">index</a>
+    <a href="https://raw.githack.com/tsrkzy/test-ogp/main/pages/static.html">static</a>
+    <a href="https://raw.githack.com/tsrkzy/test-ogp/main/pages/sync.html">sync</a>
+    <a href="https://raw.githack.com/tsrkzy/test-ogp/main/pages/async.html">async</a>
+    <a href="https://raw.githack.com/tsrkzy/test-ogp/main/pages/empty-desc-static.html">empty-desc-static</a>
+    <a href="https://raw.githack.com/tsrkzy/test-ogp/main/pages/empty-desc-sync.html">empty-desc-sync</a>
+    <a href="https://raw.githack.com/tsrkzy/test-ogp/main/pages/empty-desc-async.html">empty-desc-async</a>
+  </body>
+</html>
