@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
 
     <!---->
-    <meta name="description" content="this is meta.description.content" />
+    <meta name="description" content="" />
     <meta property="og:type" content="website"/>
-    <meta property="og:title" content="meta property=og:title"/>
-    <meta property="og:description" content="meta property=og:description"/>
-    <meta property="og:site_name" content="meta property=og:site_name"/>
+    <meta property="og:title" content="アンカーリンクになるほう"/>
+    <meta property="og:description" content=""/>
+    <meta property="og:site_name" content="アンカーリンクにならないほう"/>
     <title>titleタグの文字列</title>
+    <script type="text/javascript">
+      function asyncChangeTitle() {
+        return new Promise(resolve => {
+          document.title = "JSから非同期で差し替えた文字列";
+          resolve();
+        });
+      }
+      asyncChangeTitle();
+    </script>
     <!---->
   </head>
   <body>
