@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+    <!---->
+    <meta name="description" content="this is meta.description.content"/>
+    <!--    <meta property="og:type" content="website"/>-->
+    <!--    <meta property="og:title" content="meta property=og:title"/>-->
+    <!--    <meta property="og:description" content="meta property=og:description"/>-->
+    <!--    <meta property="og:site_name" content="meta property=og:site_name"/>-->
+    <title>titleタグの文字列</title>
+    <script type="text/javascript">
+      function asyncChangeTitle() {
+        return new Promise(resolve => {
+          document.title = "JSから非同期で差し替えた文字列";
+          const $h = document.head;
+          const $m = document.createElement("META");
+          $m.setAttribute("property", "og:description");
+          $m.setAttribute("content", "og:description");
+          $h.appendChild($m);
+          resolve();
+        });
+      }
+
+      asyncChangeTitle();
+    </script>
+    <!---->
+  </head>
+  <body>
+  </body>
+</html>
